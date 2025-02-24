@@ -4,159 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Radheesh M</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="favicon.png" type="image/x-icon">
-    <style>
-        body {
-            font-family: Calibri, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #e8f5e9;
-            color: #2e7d32;
-        }
-        header {
-            background-color: #1b5e20;
-            color: white;
-            padding: 1rem;
-            text-align: center;
-        }
-        .profile-photo {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            display: block;
-            margin: 10px auto;
-            border: 3px solid #2e7d32;
-        }
-        .contact-details {
-            margin-top: 10px;
-            font-size: 14px;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-        }
-        section {
-            padding: 20px;
-            max-width: 800px;
-            margin: auto;
-            background: white;
-            margin-bottom: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: justify;
-        }
-        section p, section ul {
-            line-height: 2;
-            text-indent: 50px;
-        }
-        .skill-bar {
-            background: #c8e6c9;
-            border-radius: 5px;
-            padding: 5px;
-            width:60%;
-            left:20%;
-            margin: 10px 0;
-            position: relative;
-        }
-        .skill-bar span {
-            display: block;
-            height: 30px;
-            background: #50a054;
-            border-radius: 5px;
-            text-align: right;
-            padding-right: 10px;
-            line-height: 30px;
-            color: white;
-            font-weight: bold;
-        }
-        footer {
-            text-align: center;
-            padding: 1rem;
-            background-color: #1b5e20;
-            color: white;
-        }
-        .timeline {
-            position: relative;
-            max-width: 800px;
-            margin: auto;
-        }
-        .timeline::after {
-            content: '';
-            position: absolute;
-            width: 6px;
-            background-color: #4CAF50;
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            margin-left: -3px;
-        }
-        .timeline-box {
-            padding: 20px;
-            position: relative;
-            width: 50%;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            margin-bottom: 20px;
-        }
-        .left {
-            left: 10px;
-            background-color: #94e89b;
-            width:350px;
-            color: #2e7d32;
-        }
-        .right {
-            left: 50%;
-            background-color: #94e89b;
-            width:350px;
-        }
-        .timeline-box::after {
-            content: '';
-            position: absolute;
-            width: 15px;
-            height: 15px;
-            background-color: white;
-            border: 4px solid #4CAF50;
-            top: 20px;
-            right: -12px;
-            border-radius: 50%;
-            z-index: 1;
-        }
-        .right::after {
-            left: -10px;
-        }
-        .timeline-box h3 {
-            margin: 0 0 10px;
-            color: #4CAF50;
-        }
-        .timeline-box p {
-            margin: 0;
-            font-size: 14px;
-            color: #333;
-        }
-        @media screen and (max-width: 600px) {
-            .timeline::after {
-                left: 10px;
-            }
-            .timeline-box {
-                width: 100%;
-                left: 0;
-                margin-left: 20px;
-            }
-            .timeline-box::after {
-                left: -10px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header>
@@ -176,6 +25,7 @@
                 <li><a href="#journey">My Journey & Roadmap</a></li>
                 <li><a href="#languages">Languages</a></li>
                 <li><a href="#hobbies">Hobbies and Interests</a></li>
+                <li><a href="#gallery">Photo Gallery</a></li>
                 <li><a href="#summary">Portfolio Summary</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -194,15 +44,15 @@
     
     <section id="skills">
         <h2>Skill Sets</h2>
-        <div class="skill-bar"><span style="width: 90%;">Leadership & Team Management - 90%</span></div>
+        <div class="skill-bar"><span style="width: 95%;">Leadership & Team Management - 95%</span></div>
         <div class="skill-bar"><span style="width: 85%;">Strategic Planning & Decision-Making - 85%</span></div>
         <div class="skill-bar"><span style="width: 80%;">Process Optimization & Workflow Efficiency - 80%</span></div>
         <div class="skill-bar"><span style="width: 75%;">Data Analysis: Power BI, Excel - 75%</span></div>
         <div class="skill-bar"><span style="width: 70%;">Technology & Digital Transformation - 70%</span></div>
         <div class="skill-bar"><span style="width: 75%;">Automation: Python, RPA - 75%</span></div>
-        <div class="skill-bar"><span style="width: 70%;">Graphic Design: Photoshop, Illustrator - 70%</span></div>
-        <div class="skill-bar"><span style="width: 65%;">Multimedia Scripting & Video Editing - 65%</span></div>
-        <div class="skill-bar"><span style="width: 80%;">Project Management & Agile Methodologies - 80%</span></div>
+        <div class="skill-bar"><span style="width: 95%;">Graphic Design: Photoshop, Illustrator - 95%</span></div>
+        <div class="skill-bar"><span style="width: 95%;">Multimedia Scripting & Video Editing - 95%</span></div>
+        <div class="skill-bar"><span style="width: 80%;">Project Management - 80%</span></div>
         <div class="skill-bar"><span style="width: 85%;">Problem-Solving & Critical Thinking - 85%</span></div>
     </section>
 
@@ -210,20 +60,11 @@
         <h2>Qualification</h2>
         <p><strong>Educational Background:</strong></p>
         <ul>
-            <li><strong>Master of Business Administration (MBA)</strong> - Specialization in Business Strategy & Operations</li>
-            <li><strong>Bachelor of Technology (B.Tech)</strong> - Major in Computer Science & Engineering</li>
+            <li><strong>Bachelor of Technology (B.Tech)</strong> - Major in Electronics & Communication Engineering</li>
         </ul>
         <p><strong>Certifications:</strong></p>
         <ul>
-            <li>Project Management Professional (PMP) Certification</li>
-            <li>Certified Business Analyst Professional (CBAP)</li>
             <li>Microsoft Power BI Data Analyst Certification</li>
-        </ul>
-        <p><strong>Additional Training:</strong></p>
-        <ul>
-            <li>Advanced Data Analytics & Visualization</li>
-            <li>Agile & Scrum Methodologies</li>
-            <li>Leadership & Change Management</li>
         </ul>
     </section>
     
@@ -294,6 +135,20 @@
         <p>Beyond my professional pursuits, I have a keen interest in DSLR photography, where I enjoy capturing stunning visuals and experimenting with different compositions. I am also passionate about learning Power BI, enhancing my data visualization skills. Additionally, I have a Dalmatian, and spending time with my pet is one of my favorite ways to unwind. Traveling is another passion of mine, as it allows me to explore new cultures and perspectives. In my free time, I also enjoy multimedia scripting, blending creativity with technology to bring ideas to life.</p>
     </section>
 
+    <section id="gallery">
+        <h2>Photo Gallery</h2>
+        <div class="gallery-container">
+            <img src="image/photo1.jpg" alt="Photo 1" class="no-download">
+            <img src="image/photo2.jpg" alt="Photo 2" class="no-download">
+            <img src="image/photo3.jpg" alt="Photo 3" class="no-download">
+            <img src="image/photo4.jpg" alt="Photo 4" class="no-download">
+            <img src="image/photo5.jpg" alt="Photo 1" class="no-download">
+            <img src="image/photo6.jpg" alt="Photo 2" class="no-download">
+            <img src="image/photo7.jpg" alt="Photo 3" class="no-download">
+            <img src="image/photo8.jpg" alt="Photo 4" class="no-download">
+        </div>
+    </section>
+
     <section id="summary">
         <h2>Portfolio Summary</h2>
         <p>I am a passionate and detail-oriented professional with a strong background in Python programming and a growing expertise in Power BI and multimedia scripting. With a keen interest in data visualization and creative technologies, I enjoy solving complex problems and bringing innovative ideas to life. My enthusiasm for DSLR photography and travel fuels my creativity, while my ability to adapt and learn new skills keeps me ahead in a fast-evolving digital landscape. Whether working on technical solutions or artistic projects, I strive for excellence and continuous improvement in everything I do.</p>
@@ -343,6 +198,13 @@
             });
         }
 
+    </script>
+    <script>
+        document.addEventListener("contextmenu", function (e) {
+            if (e.target.classList.contains("no-download")) {
+                e.preventDefault();
+            }
+        });
     </script>
 
     
