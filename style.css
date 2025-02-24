@@ -1,10 +1,13 @@
-
 body {
     font-family: Calibri, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #e8f5e9;
     color: #2e7d32;
+    user-select: none; /* Disable text selection */
+    -webkit-user-select: none; /* For Safari */
+    -moz-user-select: none; /* For Firefox */
+    -ms-user-select: none; /* For Internet Explorer/Edge */
 }
 header {
     background-color: #1b5e20;
@@ -30,7 +33,6 @@ nav ul {
 }
 nav ul li {
     display: inline;
-    margin: 0 15px;
 }
 nav ul li a {
     color: white;
@@ -165,3 +167,22 @@ footer {
     pointer-events: none; /* Disable drag */
     -webkit-user-drag: none; /* Disable drag on Safari */
 }
+
+#goTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    font-size: 14px;
+}
+
+#goTopBtn:hover {
+    background-color: #0056b3;
+}
+
