@@ -5,19 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Radheesh M</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: Calibri, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
+            background-color: #e8f5e9;
+            color: #2e7d32;
         }
         header {
-            background-color: #333;
+            background-color: #1b5e20;
             color: white;
             padding: 1rem;
             text-align: center;
+        }
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            display: block;
+            margin: 10px auto;
+            border: 3px solid #2e7d32;
+        }
+        .contact-details {
+            margin-top: 10px;
+            font-size: 14px;
         }
         nav ul {
             list-style: none;
@@ -39,59 +52,299 @@
             margin-bottom: 20px;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: justify;
         }
-        .project {
-            background: #e4e4e4;
-            padding: 15px;
-            margin: 10px 0;
+        section p, section ul {
+            line-height: 2;
+            text-indent: 50px;
+        }
+        .skill-bar {
+            background: #c8e6c9;
             border-radius: 5px;
+            padding: 5px;
+            width:60%;
+            left:20%;
+            margin: 10px 0;
+            position: relative;
+        }
+        .skill-bar span {
+            display: block;
+            height: 30px;
+            background: #50a054;
+            border-radius: 5px;
+            text-align: right;
+            padding-right: 10px;
+            line-height: 30px;
+            color: white;
+            font-weight: bold;
         }
         footer {
             text-align: center;
             padding: 1rem;
-            background-color: #333;
+            background-color: #1b5e20;
             color: white;
+        }
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: auto;
+        }
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #4CAF50;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        .timeline-box {
+            padding: 20px;
+            position: relative;
+            width: 50%;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .left {
+            left: 10px;
+            background-color: #94e89b;
+            width:350px;
+            color: #2e7d32;
+        }
+        .right {
+            left: 50%;
+            background-color: #94e89b;
+            width:350px;
+        }
+        .timeline-box::after {
+            content: '';
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background-color: white;
+            border: 4px solid #4CAF50;
+            top: 20px;
+            right: -12px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .right::after {
+            left: -10px;
+        }
+        .timeline-box h3 {
+            margin: 0 0 10px;
+            color: #4CAF50;
+        }
+        .timeline-box p {
+            margin: 0;
+            font-size: 14px;
+            color: #333;
+        }
+        @media screen and (max-width: 600px) {
+            .timeline::after {
+                left: 10px;
+            }
+            .timeline-box {
+                width: 100%;
+                left: 0;
+                margin-left: 20px;
+            }
+            .timeline-box::after {
+                left: -10px;
+            }
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Radheesh M</h1>
+        <img src="profile.jpg" alt="Profile Photo" class="profile-photo">
+        <div class="contact-details">
+            <p>Email: <a href="mailto:radheesh.m@gmail.com" style="color:white;">radheesh.m@gmail.com</a>| Phone: <a href="tel:+91 9916644184" style="color:white;">+91 99166 44184</a> | LinkedIn: <a href="https://www.linkedin.com/in/radheesh-m-79045a43" style="color:white;" target="_blank">LinkedIn Profile</a></p>
+        </div>
         <nav>
             <ul>
-                <li><a href="#about">About</a></li>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#skills">Skill Sets</a></li>
+                <li><a href="#qualification">Qualification</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#journey">My Journey & Roadmap</a></li>
+                <li><a href="#languages">Languages</a></li>
+                <li><a href="#hobbies">Hobbies and Interests</a></li>
+                <li><a href="#summary">Portfolio Summary</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
     
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Welcome to my portfolio! I am passionate about coding, data analytics, and photography.</p>
+    <section id="overview">
+        <h2>Overview</h2>
+        <p>I am an accomplished and results-driven professional with a strong background in leadership, strategic planning, and operational management. With a deep understanding of business processes and a passion for efficiency, I specialize in optimizing workflows and enhancing team performance. My ability to analyze data, implement innovative solutions, and drive organizational success has enabled me to excel in managerial roles. I am committed to continuous learning, staying ahead of industry trends, and leveraging technology to improve productivity and decision-making.</p>
+    </section>
+    
+    <section id="introduction">
+        <h2>Introduction</h2>
+        <p>Welcome to my portfolio! I bring years of experience in managing teams, streamlining operations, and developing data-driven strategies for business growth. My expertise lies in fostering collaboration, mentoring professionals, and implementing efficient processes to enhance productivity. Passionate about innovation and leadership, I believe in empowering teams and leveraging technology to drive meaningful change. Through this portfolio, I aim to showcase my skills, experiences, and achievements in the field of management and business strategy.</p>
+    </section>
+    
+    <section id="skills">
+        <h2>Skill Sets</h2>
+        <div class="skill-bar"><span style="width: 90%;">Leadership & Team Management - 90%</span></div>
+        <div class="skill-bar"><span style="width: 85%;">Strategic Planning & Decision-Making - 85%</span></div>
+        <div class="skill-bar"><span style="width: 80%;">Process Optimization & Workflow Efficiency - 80%</span></div>
+        <div class="skill-bar"><span style="width: 75%;">Data Analysis: Power BI, Excel - 75%</span></div>
+        <div class="skill-bar"><span style="width: 70%;">Technology & Digital Transformation - 70%</span></div>
+        <div class="skill-bar"><span style="width: 75%;">Automation: Python, RPA - 75%</span></div>
+        <div class="skill-bar"><span style="width: 70%;">Graphic Design: Photoshop, Illustrator - 70%</span></div>
+        <div class="skill-bar"><span style="width: 65%;">Multimedia Scripting & Video Editing - 65%</span></div>
+        <div class="skill-bar"><span style="width: 80%;">Project Management & Agile Methodologies - 80%</span></div>
+        <div class="skill-bar"><span style="width: 85%;">Problem-Solving & Critical Thinking - 85%</span></div>
+    </section>
+
+    <section id="qualification">
+        <h2>Qualification</h2>
+        <p><strong>Educational Background:</strong></p>
+        <ul>
+            <li><strong>Master of Business Administration (MBA)</strong> - Specialization in Business Strategy & Operations</li>
+            <li><strong>Bachelor of Technology (B.Tech)</strong> - Major in Computer Science & Engineering</li>
+        </ul>
+        <p><strong>Certifications:</strong></p>
+        <ul>
+            <li>Project Management Professional (PMP) Certification</li>
+            <li>Certified Business Analyst Professional (CBAP)</li>
+            <li>Microsoft Power BI Data Analyst Certification</li>
+        </ul>
+        <p><strong>Additional Training:</strong></p>
+        <ul>
+            <li>Advanced Data Analytics & Visualization</li>
+            <li>Agile & Scrum Methodologies</li>
+            <li>Leadership & Change Management</li>
+        </ul>
     </section>
     
     <section id="projects">
         <h2>Projects</h2>
-        <div class="project">
-            <h3>Project 1</h3>
-            <p>Description of your project.</p>
-        </div>
-        <div class="project">
-            <h3>Project 2</h3>
-            <p>Description of your project.</p>
-        </div>
+        <p>Managed and executed projects that improved operational efficiency, automated workflows, and enhanced business intelligence strategies.</p>
+        <ul>
+            <li><strong>Business Process Automation</strong> - Designed and implemented an automated workflow system, reducing manual effort by 40%.</li>
+            <li><strong>Data Visualization Dashboard</strong> - Developed an interactive Power BI dashboard for real-time analytics and insights.</li>
+            <li><strong>Customer Engagement Platform</strong> - Led the creation of a CRM solution to enhance customer interactions and retention.</li>
+            <li><strong>Operational Cost Reduction Initiative</strong> - Identified inefficiencies and implemented cost-cutting measures, saving 15% annually.</li>
+        </ul>
     </section>
     
+    <section id="experience">
+        <h2>Experience</h2>
+        <p>5+ years of experience in managerial roles, overseeing cross-functional teams and implementing business strategies to drive growth.</p>
+        <ul>
+            <li><strong>Senior Business Analyst - XYZ Corporation</strong> (2021 - Present)</li>
+            <ul>
+                <li>Developed business strategies that improved operational efficiency by 30%.</li>
+                <li>Led cross-functional teams to implement process automation solutions.</li>
+                <li>Utilized Power BI to deliver real-time business insights to stakeholders.</li>
+            </ul>
+            <li><strong>Operations Manager - ABC Ltd.</strong> (2018 - 2021)</li>
+            <ul>
+                <li>Streamlined business processes, reducing project turnaround time by 25%.</li>
+                <li>Managed vendor relationships and procurement strategies to optimize costs.</li>
+                <li>Implemented agile methodologies to enhance team collaboration.</li>
+            </ul>
+        </ul>
+    </section>
+
+    <section id="journey">
+        <h2>My Journey & Roadmap</h2>
+        <p>This timeline highlights my journey, skills, and aspirations. From exploring Python programming and multimedia scripting to mastering Power BI and DSLR photography, I am constantly evolving. Each milestone reflects a step toward my passion for technology, creativity, and learning. As I continue to grow, I aim to work on AI-driven multimedia projects, enhance my data visualization expertise, and explore new experiences through travel.</p>
+        <div class="timeline">
+            <div class="timeline-box left">
+                <h3>2023 - Early 2024</h3>
+                <p>Explored Python programming, multimedia scripting, and started DSLR photography.</p>
+            </div>            
+            <div class="timeline-box right">
+                <h3>Mid-2024</h3>
+                <p>Started learning Power BI, improved Python skills, and planned travel.</p>
+            </div>
+            <div class="timeline-box left">
+                <h3>Late 2024 - 2025</h3>
+                <p>Advanced in Power BI, photography, multimedia projects, and planned to buy a car.</p>
+            </div>
+            <div class="timeline-box right">
+                <h3>2025 & Beyond</h3>
+                <p>Master Power BI, work on AI-driven multimedia projects, and travel more.</p>
+            </div>
+        </div>
+    </section>
+        
+    <section id="languages">
+        <h2>Languages</h2>
+        <div class="skill-bar"><span style="width: 90%;">English</span></div>
+        <div class="skill-bar"><span style="width: 85%;">Hindi</span></div>
+        <div class="skill-bar"><span style="width: 80%;">Malayalam</span></div>
+        <div class="skill-bar"><span style="width: 85%;">Tamil</span></div>
+        <div class="skill-bar"><span style="width: 80%;">Kannada</span></div>
+    </section>
+
+    <section id="hobbies">
+        <h2>Hobbies and Interests</h2>
+        <p>Beyond my professional pursuits, I have a keen interest in DSLR photography, where I enjoy capturing stunning visuals and experimenting with different compositions. I am also passionate about learning Power BI, enhancing my data visualization skills. Additionally, I have a Dalmatian, and spending time with my pet is one of my favorite ways to unwind. Traveling is another passion of mine, as it allows me to explore new cultures and perspectives. In my free time, I also enjoy multimedia scripting, blending creativity with technology to bring ideas to life.</p>
+    </section>
+
+    <section id="summary">
+        <h2>Portfolio Summary</h2>
+        <p>I am a passionate and detail-oriented professional with a strong background in Python programming and a growing expertise in Power BI and multimedia scripting. With a keen interest in data visualization and creative technologies, I enjoy solving complex problems and bringing innovative ideas to life. My enthusiasm for DSLR photography and travel fuels my creativity, while my ability to adapt and learn new skills keeps me ahead in a fast-evolving digital landscape. Whether working on technical solutions or artistic projects, I strive for excellence and continuous improvement in everything I do.</p>
+    </section>
+
     <section id="contact">
         <h2>Contact</h2>
-        <p>Email: your.email@example.com</p>
-        <p>LinkedIn: <a href="#">Your LinkedIn</a></p>
+        <p>If you'd like to get in touch, feel free to reach out via email, phone or LinkedIn.</p>
+        <ul>
+            <li><strong>Email:</strong> <a href="mailto:radheesh.m@gmail.com">radheesh.m@gmail.com</a></li>
+            <li><strong>Phone:</strong> <a href="tel:+91 9916644184">+91 9916644184</a></li>
+            <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/radheesh-m-79045a43" target="_blank">LinkedIn Profile</a></li>
+        </ul>
     </section>
-    
+
     <footer>
         <p>&copy; 2025 Radheesh M. All Rights Reserved.</p>
+        <p><a href="#" onclick="downloadPDF()">Download This Page as PDF</a></p>
     </footer>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script>
+        function downloadPDF() {
+            const { jsPDF } = window.jspdf;
+            html2canvas(document.body, { scale: 2 }).then(canvas => {
+                let imgData = canvas.toDataURL('image/png');
+                let pdf = new jsPDF('p', 'mm', 'a4');
+
+                let imgWidth = 210; // A4 width in mm
+                let pageHeight = 297; // A4 height in mm
+                let imgHeight = (canvas.height * imgWidth) / canvas.width;
+                let heightLeft = imgHeight;
+                let position = 0;
+
+                pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+                heightLeft -= pageHeight;
+
+                while (heightLeft > 0) {
+                    position -= pageHeight;
+                    pdf.addPage();
+                    pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+                    heightLeft -= pageHeight;
+                }
+
+                pdf.save("Radheesh_Portfolio.pdf");
+            });
+        }
+
+    </script>
+
+    
 </body>
 </html>
-
