@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Radheesh M</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.png" type="image/x-icon">
 </head>
 <body>
     <header>
@@ -219,6 +219,19 @@
         <p>I am a passionate and detail-oriented professional with a strong background in Python programming and a growing expertise in Power BI and multimedia scripting. With a keen interest in data visualization and creative technologies, I enjoy solving complex problems and bringing innovative ideas to life. My enthusiasm for DSLR photography and travel fuels my creativity, while my ability to adapt and learn new skills keeps me ahead in a fast-evolving digital landscape. Whether working on technical solutions or artistic projects, I strive for excellence and continuous improvement in everything I do.</p>
     </section>
 
+    <section id="blogspot">
+        <h2>BlogSpot</h2>
+        <div class="container">
+            <div class="blog-form">
+                <input type="text" id="title" placeholder="Enter blog title">
+                <textarea id="content" placeholder="Write your blog..."></textarea>
+                <button id="blogbutton" onclick="addBlog()">Add Blog</button>
+            </div>
+            <div id="blogList"></div>
+        </div>
+
+    </section>
+
     <section id="contact">
         <h2>Contact</h2>
         <p>If you'd like to get in touch, feel free to reach out via email, phone or LinkedIn.</p>
@@ -227,7 +240,9 @@
             <li><strong>Phone:</strong> <a href="tel:+91 9916644184">+91 9916644184</a></li>
             <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/radheesh-m-79045a43" target="_blank">LinkedIn Profile</a></li>
         </ul>
+        
         <form action="https://formsubmit.co/radheesh.m@gmail.com" method="POST" class="contact-form">
+            <h3>Let's get in touch</h3>
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_next" value="https://radheeshm.github.io/portfolio">
 
@@ -236,6 +251,9 @@
             
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone:</label>
+            <input type="phone" id="phone" name="phone" required>
             
             <label for="subject">Subject:</label>
             <input type="text" id="subject" name="subject" required>
@@ -256,7 +274,7 @@
         <p>&copy; 2025 Radheesh M. All Rights Reserved.</p>
         <p><a href="#" onclick="downloadPDF()">Download This Page as PDF</a></p>
     </footer>
-    
+    <script src="script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script>
@@ -342,6 +360,5 @@
             }
         });
     </script>
-    
 </body>
 </html>
