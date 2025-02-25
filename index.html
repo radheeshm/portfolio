@@ -202,8 +202,8 @@
     <section id="gallery">
         <h2>Photo Gallery</h2>
         <div class="gallery-container">
-            <img src="image/photo1.jpg" alt="Photo 1" class="no-download">
-            <img src="image/photo2.jpg" alt="Photo 2" class="no-download">
+            <img src='https://m.psecn.photoshelter.com/img-get/I0000m4s1quuqeNA/s/500/I0000m4s1quuqeNA.jpg' alt="Photo 1" class="no-download" />
+            <img src="https://m.psecn.photoshelter.com/img-get/I0000jgK0hfic40c/s/500/I0000jgK0hfic40c.jpg" alt="Photo 2" class="no-download">
             <img src="image/photo3.jpg" alt="Photo 3" class="no-download">
             <img src="image/photo4.jpg" alt="Photo 4" class="no-download">
             <img src="image/photo5.jpg" alt="Photo 1" class="no-download">
@@ -227,6 +227,11 @@
             <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/radheesh-m-79045a43" target="_blank">LinkedIn Profile</a></li>
         </ul>
     </section>
+
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="fullImage">
+    </div>
 
     <footer>
         <p>&copy; 2025 Radheesh M. All Rights Reserved.</p>
@@ -282,7 +287,42 @@
             window.scrollTo({ top: 0, behavior: "smooth" });
         }
     </script>
+    <script>
+        var modal = document.getElementById("imageModal");
+        var modalImg = document.getElementById("fullImage");
+        var closeModal = document.querySelector(".close");
 
+        // Add click event to all images
+        document.querySelectorAll(".no-download").forEach(img => {
+            img.addEventListener("click", function () {
+                modal.style.display = "flex";
+                setTimeout(() => modal.classList.add("show"), 10); // Smooth fade-in effect
+                modalImg.src = this.src;
+            });
+        });
+
+        // Close modal with animation
+        closeModal.addEventListener("click", function () {
+            modal.classList.remove("show");
+            modal.classList.add("hide");
+            setTimeout(() => {
+                modal.style.display = "none";
+                modal.classList.remove("hide");
+            }, 400); // Wait for fade-out animation
+        });
+
+        // Close modal when clicking outside the image
+        modal.addEventListener("click", function (e) {
+            if (e.target === modal) {
+                modal.classList.remove("show");
+                modal.classList.add("hide");
+                setTimeout(() => {
+                    modal.style.display = "none";
+                    modal.classList.remove("hide");
+                }, 400);
+            }
+        });
+    </script>
     
 </body>
 </html>
