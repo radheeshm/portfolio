@@ -40,7 +40,7 @@ nav ul li a {
 }
 section {
     padding: 20px;
-    max-width: 800px;
+    max-width:800px;
     margin: auto;
     background: white;
     margin-bottom: 20px;
@@ -50,7 +50,7 @@ section {
 }
 section p, section ul {
     line-height: 2;
-    text-indent: 50px;
+    text-indent: 60px;
 }
 .skill-bar {
     background: #c8e6c9;
