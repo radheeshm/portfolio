@@ -34,9 +34,9 @@ function loadBlogs() {
         blogPost.innerHTML = `
             <h2>${blog.title}</h2>
             <p>${blog.content}</p>
-            <button onclick="deleteBlog(${index})">Delete</button>
+            
         `;
-
+//<button onclick="deleteBlog(${index})">Delete</button>
         blogList.appendChild(blogPost);
     });
 }
