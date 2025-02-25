@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Radheesh M</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="favicon.png" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header>
         <h1>Radheesh M</h1>
+        <p class="tagline">Innovator | Developer | Photographer</p>
         <img src="profile.jpg" alt="Profile Photo" class="profile-photo">
         <div class="contact-details">
             <p>Email: <a href="mailto:radheesh.m@gmail.com" style="color:white;">radheesh.m@gmail.com</a>| Phone: <a href="tel:+91 9916644184" style="color:white;">+91 99166 44184</a> | LinkedIn: <a href="https://www.linkedin.com/in/radheesh-m-79045a43" style="color:white;" target="_blank">LinkedIn Profile</a></p>
@@ -226,6 +227,23 @@
             <li><strong>Phone:</strong> <a href="tel:+91 9916644184">+91 9916644184</a></li>
             <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/radheesh-m-79045a43" target="_blank">LinkedIn Profile</a></li>
         </ul>
+        <form action="https://formsubmit.co/radheesh.m@gmail.com" method="POST" class="contact-form">
+
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            
+            <button type="submit">Send Message</button>
+        </form>
     </section>
 
     <div id="imageModal" class="modal">
