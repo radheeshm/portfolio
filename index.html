@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Radheesh M</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="favicon.png" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header>
@@ -274,9 +274,90 @@
         <p>&copy; 2025 Radheesh M. All Rights Reserved.</p>
         <p><a href="#" onclick="downloadPDF()">Download This Page as PDF</a></p>
     </footer>
-    <script src="script.js"></script>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script type="module">
+        // ✅ Import Firebase modules
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+        import { getFirestore, collection, addDoc, query, orderBy, onSnapshot } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+        // ✅ Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyDrD6zE7zvPnsqwac9AOmhHnSzdWGEe--o",
+            authDomain: "blogspot-f7f59.firebaseapp.com",
+            projectId: "blogspot-f7f59",
+            storageBucket: "blogspot-f7f59.firebasestorage.app",
+            messagingSenderId: "776033143897",
+            appId: "1:776033143897:web:2f998ea42b3d214d88b548"
+        };
+
+        // ✅ Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        console.log("Firebase Initialized:", app);
+
+        // ✅ Function to Add Blog Post
+        async function addBlog() {
+            const title = document.getElementById("title").value;
+            const content = document.getElementById("content").value;
+
+            if (title && content) {
+                try {
+                    const docRef = await addDoc(collection(db, "blogs"), {
+                        title: title,
+                        content: content,
+                        timestamp: new Date()
+                    });
+                    console.log("Blog added with ID:", docRef.id);
+                    alert("Blog added successfully!");
+
+                    // Clear input fields after submission
+                    document.getElementById("title").value = "";
+                    document.getElementById("content").value = "";
+
+                } catch (error) {
+                    console.error("Error adding blog:", error);
+                }
+            } else {
+                alert("Please enter a title and content.");
+            }
+        }
+
+        // ✅ Function to Display Blogs in Real-time
+        function displayBlogs() {
+            const blogList = document.getElementById("blogList");
+            blogList.innerHTML = "<p>Loading blogs...</p>";
+
+            const q = query(collection(db, "blogs"), orderBy("timestamp", "desc"));
+
+            // Listen for real-time updates
+            onSnapshot(q, (snapshot) => {
+                blogList.innerHTML = ""; // Clear previous content
+                snapshot.forEach((doc) => {
+                    const blog = doc.data();
+                    const blogItem = document.createElement("div");
+                    blogItem.innerHTML = `
+                        <h3>${blog.title}</h3>
+                        <p>${blog.content}</p>
+                        <hr>
+                    `;
+                    blogList.appendChild(blogItem);
+                });
+
+                if (snapshot.empty) {
+                    blogList.innerHTML = "<p>No blogs available.</p>";
+                }
+            });
+        }
+
+        // ✅ Load Blogs on Page Load
+        displayBlogs();
+
+        // ✅ Attach `addBlog` to `window` so it's accessible in HTML
+        window.addBlog = addBlog;
+    </script>
     <script>
         function downloadPDF() {
             const { jsPDF } = window.jspdf;
